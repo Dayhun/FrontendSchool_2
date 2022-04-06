@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>survey</title>
+</head>
+<body>
+    <header>
+        <fieldset>
+            <h1>나와 잘 맞는 회사는?</h1>
+            <p>가고 싶은 회사에 대한 호감도를 조사합니다. 아이고 의미 없다.</p>
+        </fieldset>
+    </header>
+    <main>
+        <section class="question_1">
+            <fieldset>
+                <p>다음 문자 중에서 왠지 마음에 드는 것을 하나 고르세요.</p>
+                <div>
+                    <input type="radio" name="like" value="네">
+                    <label for="naver">네</label>
+                </div>
+                <div>
+                    <input type="radio" name="like" value="카">
+                    <label for="kakao">카</label>
+                </div>
+                <div>
+                    <input type="radio" name="like" value="라">
+                    <label for="line">라</label>
+                </div>
+                <div>
+                    <input type="radio" name="like" value="쿠">
+                    <label for="coupang">쿠</label>
+                </div>
+                <div>
+                    <input type="radio" name="like" value="베">
+                    <label for="jejucodingbasecamp">베</label>
+                </div>
+            </fieldset>
+        </section> 
+        <section class="question_2">
+            <fieldset>
+                <p>친구와 문자를 합니다. 다음 중 어떤 메신저를 이용하시겠습니까? 모두 골라주세요.</p>
+                <div>
+                    <input type="checkbox" name="messenger" id="kakao" value="kakao">
+                    <label for="kakao"> 카카오톡</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="messenger" id="kakao" value="line">
+                    <label for="kakao"> 라인</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="messenger" id="kakao" value="insta">
+                    <label for="kakao"> 인스타그램 디엠</label>
+                </div>  
+                <div>
+                    <input type="checkbox" name="messenger" id="kakao" value="nate">
+                    <label for="kakao"> 네이트온</label>
+                </div>  
+                <div>
+                    <input type="checkbox" name="messenger" id="kakao" value="buddy">
+                    <label for="kakao"> 버디버디</label>
+                </div>      
+            </fieldset>
+            <fieldset>
+                <p>면접에서 자신의 포부를 한 문장으로 얘기한다면?</p>
+                <input type="text"><br>
+            </fieldset>
+            <fieldset>
+                <p>당신은 지금 한 기업의 최종면접을 앞두고 있습니다. 면접장에 들어가기 직전, 자기 자신에게 해주고 싶은 말은?</p>
+                <textarea name="name" rows="8" cols="80"></textarea>
+            </fieldset>
+            <fieldset>
+                <p>다음 중 기술면접때 듣고 싶은 질문이 아닌 것은?</p>
+                <select name="test_question" id="test_question">
+                    <option value="">선택</option>
+                    <option value="question_hate1">질문1</option>
+                    <option value="question_hate2">질문2</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <p>취업을 희망하는 날짜를 선택해 주세요.</p>
+                <input type="date" name="date" id="date">
+            </fieldset>
+            <fieldset>
+                <p>업무를 시작하기에 가장 적당한 시간을 고르세요.</p>
+                <input type="time" name="time" id="time">
+            </fieldset>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
