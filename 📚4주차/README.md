@@ -7,4 +7,4 @@
 |04.19|화|CSS|select-box
 |04.20|수|CSS|vending-machine
 |04.21|목|CSS|media-query
-|04.22|금|휴강|
+|04.22|금|휴강|휴강
