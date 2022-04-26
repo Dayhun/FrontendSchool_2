@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: yellow;
+        }
+
+        .item {
+            width: 33.3333%;
+            padding: 1rem;
+            border: solid 1px black;
+            box-sizing: border-box;
+            background-color: burlywood;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .item {
+                width: 50%;
+                background-color: dodgerblue;
+            }
+        }
+
+        @media screen and (max-width: 500px){
+            .item {
+            width: 100%;
+            background-color: tomato;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ex ipsum consectetur, magnam illum iste vero laudantium repellat repudiandae quaerat earum inventore voluptatibus vel vitae eligendi voluptatem ab. Aut, alias.</div>
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam fugiat nam pariatur iste dolores, error adipisci ea labore et ipsam natus officiis perferendis blanditiis! Incidunt officiis distinctio praesentium quis nobis.</div>
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam fugiat nam pariatur iste dolores, error adipisci ea labore et ipsam natus officiis perferendis blanditiis! Incidunt officiis distinctio praesentium quis nobis.</div>
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam fugiat nam pariatur iste dolores, error adipisci ea labore et ipsam natus officiis perferendis blanditiis! Incidunt officiis distinctio praesentium quis nobis.</div>
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam fugiat nam pariatur iste dolores, error adipisci ea labore et ipsam natus officiis perferendis blanditiis! Incidunt officiis distinctio praesentium quis nobis.</div>
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam fugiat nam pariatur iste dolores, error adipisci ea labore et ipsam natus officiis perferendis blanditiis! Incidunt officiis distinctio praesentium quis nobis.</div>
+    </div>
+</body>
+</html>
