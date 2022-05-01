@@ -1,9 +1,0 @@
-@mixin box {
-    width: 100px;
-    height: 100px;
-}
-
-.card {
-    @include box;
-    background-color: red;
-}
