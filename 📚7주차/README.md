@@ -7,6 +7,6 @@
 |---|---|---|---|
 |05.09|월|JavaScript|반복문
 |05.10|화|JavaScript|함수
-|05.11|수|JavaScript|
+|05.11|수|JavaScript|json
 |05.12|목|JavaScript|
 |05.13|금|JavaScript|
