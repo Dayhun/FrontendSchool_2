@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .box {
+            background-color: black;
+            height: 300px;
+            width: 300px;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+            margin: 10px auto;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .green {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box"></div>
+        <div class="button-group">
+            <button class="btn-red">빨강</button>
+            <button class="btn-yellow">노랑</button>
+            <button class="btn-green">초록</button>
+        </div>
+    </div>
+
+    <script>
+        const box = document.querySelector('.box');
+        const myBtn_red = document.querySelector('.btn-red');
+        const myBtn_yellow = document.querySelector('.btn-yellow');
+        const myBtn_green = document.querySelector('.btn-green');
+
+        myBtn_red.addEventListener('click', function () {
+            box.classList.remove("red", "yellow", "green");
+            box.classList.add("red");
+        })
+        myBtn_yellow.addEventListener('click', function () {
+            box.classList.remove("red", "yellow", "green");
+            box.classList.add("yellow");
+        })
+        myBtn_green.addEventListener('click', function () {
+            box.classList.remove("red", "yellow", "green");
+            box.classList.add("green");
+        })
+    </script>
+</body>
+
+</html>
