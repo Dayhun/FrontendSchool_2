@@ -6,7 +6,7 @@
 ## 일정표
 |일자|요일|구분|학습내용
 |---|---|---|---|
-|05.06|월|JavaScript|코드리뷰
+|05.16|월|JavaScript|코드리뷰
 |05.17|화|JavaScript|객체지향
 |05.18|수|JavaScript|class
 |05.19|목|JavaScript|최적화
