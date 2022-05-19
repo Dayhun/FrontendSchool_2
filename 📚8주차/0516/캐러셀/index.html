@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <article id="app">
+        <ul class="list-item">
+            <!-- <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/jammanbo.png" alt=""></li>
+            <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/ev.png?raw=true" alt="">
+            </li>
+            <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/mazayoung.png?raw=true" alt="">
+            </li>
+            <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/mobugi.png" alt=""></li>
+            <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/nyaong.png" alt=""></li>
+            <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/pulin.png" alt=""></li>
+            <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/weirdseed.png" alt=""></li> -->
+        </ul>
+    </article>
+
+    <script>
+        const center = document.querySelector('.list-item');
+
+        // 배열을 이용하는 다른 방법!
+
+        const arrPic = [
+            "https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/jammanbo.png",
+            "https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/ev.png?raw=true",
+            "https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/mazayoung.png?raw=true",
+            "https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/mobugi.png",
+            "https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/nyaong.png",
+            "https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/pulin.png",
+            "https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/weirdseed.png"
+        ];
+
+        arrPic.forEach(item => {
+            const elLi = document.createElement('li');
+            elLi.innerHTML = `<img src=${item} alt=''>`;
+            center.appendChild(elLi);
+        })
+
+
+        const items = document.querySelectorAll('list-item li');
+        // 더 요약하는 방법
+        // const items = center.querySelectorAll('li');
+        const angle = 360 / items.length;
+        let currAngle = 0;
+
+        //전체에 클릭이벤트 설정
+        document.addEventListener('click', (event) => {
+            console.log("click");
+            //화면 가로를 반으로 나눴을때 왼쪽에서부터 x축으로 오른쪽 까지의 거리 
+            //오른쪽 화면을 클릭했을때
+            if (window.innerWidth / 2 < event.clientX) {
+                currAngle = currAngle + angle;
+                //더 줄이는 방법
+                //currAngle += angle;
+            } else {
+                //왼쪽 화면을 클릭했을때
+                currAngle = currAngle - angle;
+                //더 줄이는 방법
+                //currAngle -= angle;
+            }
+            center.style.transform = `translate(-50%, -50%) rotateY(${currAngle}deg)`;
+        });
+    </script>
+    <!-- 
+    답지    
+    const center = document.querySelector('.list-item');
+    const items = center.querySelectorAll('li');
+    const angle = 360 / items.length;
+    let currAngle = 0;
+
+    document.addEventListener('click', (event) => {
+        if (window.innerWidth / 2 < event.clientX) {
+
+            currAngle += angle;
+        } else {
+
+            currAngle -= angle;
+        }
+
+        center.style.transform = `translate(-50%, -50%) rotateY(${currAngle}deg)`;
+    }); -->
+</body>
+
+</html>
