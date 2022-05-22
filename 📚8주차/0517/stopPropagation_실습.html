@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <h1>나의 todo list</h1>
+    <p>1. 오늘 저녁에는 부대찌게를 끓여 먹겠다.<button type="button">삭제</button></p>
+    <p>2. 후식으로 슈팅스타를 먹겠다.<button type="button">삭제</button></p>
+    <p>3. 자기 전에 반드시 내일 아침 메뉴를 생각해두겠다.<button type="button">삭제</button></p>
+
+    <script>
+        const p_content = document.querySelectorAll('p');
+        const button_confirm = document.querySelectorAll('button');
+
+        for (let i = 0; i < p_content.length; i++) {
+            p_content[i].addEventListener('click', (event) => {
+                alert(event.target.textContent.slice(0, -2));
+            })
+        };
+
+
+        /*
+        //방법 2 (노드리스트의 forEach문은 IE지원 X)
+        p_content.forEach((item) => {
+            item.addEventListener('click', (event) => {
+                alert(event.target.textContent.slice(0, -2));
+            })
+        });
+
+        //방법 3 (해결방법)
+        Array.prototype.forEach.call(p_content, (item)=>{
+            item.addEventListener('click', (event) => {
+                alert(event.target.textContent.slice(0, -2));
+            })
+        });
+        */
+
+        for (const item of button_confirm) {
+            item.addEventListener('click', (event) => {
+                let result = confirm('삭제하시겠습니까?');
+                event.stopPropagation();
+                if (result) {
+                    item.parentElement.remove();
+                }
+            })
+        };
+    </script>
+</body>
+
+</html>
