@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        // function Robot(name) {
+        //     this.name = name;
+        // }
+        // Robot.prototype.sayYourName = function () {
+        //     console.log(`제 이름은 ${this.name}입니다.`);
+        // }
+
+        // const bot1 = new Robot('8팀');
+
+        class RobotClass {
+            //class안에서는 function단어 생략!
+            //constructor : 생성자함수의 역할
+            constructor(name) {
+                this.name = name;
+            }
+            //함수정의
+            sayYourName() {
+                console.log(`제 이름은 ${this.name}입니다.`);
+            }
+        }
+
+        //클래스를 이용한 인스턴스 생성
+        const botClass1 = new RobotClass('8팀');
+
+        //나만의 클래스 만들어보기
+        class Introduce {
+            constructor(name, age, bloodtype) {
+                this.name = name;
+                this.age = age;
+                this.bloodtype = bloodtype;
+            }
+            nameIntroduce() {
+                console.log(`제 이름은 ${this.name}입니다.`);
+            }
+            detailIntroduce() {
+                console.log(`나이는 ${this.age}이고, 혈액형은 ${this.bloodtype}입니다.`);
+            }
+        }
+        const dahyun = new Introduce('다현', '마음만은 20살', '인형');
+    </script>
+</body>
+
+</html>

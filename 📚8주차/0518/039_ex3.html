@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        function test() {
+            val1 = 'hello';//전역공간으로 선언되기 때문에, 출력됨
+            var val2 = 'world';
+        }
+        test();
+
+        console.log(val1); //출력됨
+        console.log(val2); //에러발생
+    </script>
+
+</body>
+
+</html>

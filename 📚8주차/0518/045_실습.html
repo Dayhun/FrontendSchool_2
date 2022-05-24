@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        class Sausage {
+            //생성자함수 만들기
+            constructor(el1, el2) {
+                //프로퍼티만들기
+                this.inside1 = el1;
+                this.inside2 = el2;
+            }
+            taste() {
+                console.log(`${this.inside1}와 ${this.inside2}의 맛이 난다!!!!`);
+            }
+        }
+
+
+        const sausage = new Sausage('소고기', '돼지고기');
+        //sausage.taste(); 콘솔에 찍어서 확인해보기~
+
+        class FireSausage extends Sausage {
+            // constructor(el1, el2, el3){
+            //     super(el1, el2);
+            //     this.inside3 = el3;
+            // }
+            taste() {
+                console.log(`${this.inside1}와 ${this.inside2}의 맛이 난다!!!! 불맛도 나잖아!!`);
+            }
+        }
+
+        const firsSausage = new FireSausage('소고기', '돼지고기');
+        //fireSausage.taste(); 콘솔에 찍어서 확인해보기~
+        //부모의 taste와 자식의 taste는 다름! 자식의 taste는 새로운 것!
+        //constructor를 생략해서, 부모에게 프로퍼티를 상속받았음!
+    </script>
+</body>
+
+</html>

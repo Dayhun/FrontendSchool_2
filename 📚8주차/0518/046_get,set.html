@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        class Robot {
+            #password //비공개로 전환
+
+            constructor(name, pw) {
+                this.name = name;
+                this.#password = pw;
+            }
+
+            sayYourName() {
+                console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+            }
+
+            get password() {
+                return this.#password
+            }
+
+            set password(pw) {
+                this.#password = pw;
+            }
+        }
+        const bot = new Robot('dahyun', '1234');
+
+        //console
+        //bot.password(); //error발생
+        //bot.password; //1234출력 > 프로퍼티에 접근하듯 출력됨
+        //bot.password = 6789; // 수정됨
+        //bot.password; //6789출력
+    </script>
+</body>
+
+</html>

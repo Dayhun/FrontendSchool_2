@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        class Robot {
+            #password //비공개로 전환
+
+            constructor(name, pw) {
+                this.name = name;
+                this.#password = pw;
+            }
+
+            sayYourName() {
+                console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+            }
+
+            //비공개 password에 접근, 수정하기
+            //getter 메서드 (값을 불러오는 메서드)
+            getPassword() {
+                return this.#password
+            }
+
+            //setter 메서드 (값을 수정하는 메서드)
+            setPassword(pw) {
+                this.#password = pw;
+            }
+        }
+
+        const bot = new Robot('dahyun');
+        //콘솔창에 쳐보기
+        //bot.name 출력됨
+        //bot.#password 출력안됨
+        //bot.setPassword(6536) 수정됨
+        //bot.getPassword(); //6535 출력됨
+    </script>
+</body>
+
+</html>

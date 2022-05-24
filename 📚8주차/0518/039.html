@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        var func1 = function () {
+            var a = 1;
+            var b = 2;
+            console.log(a + b); //우선 함수 안에서 찾음(함수스코프)
+        }
+
+        var a = 20; //함수 스코프 안에 a가 없었다면 20을 입력받음
+        func1(); // 3 출력
+    </script>
+</body>
+
+</html>

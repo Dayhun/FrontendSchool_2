@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        var func = function () {
+            var a = 1;
+            var b = 2;
+
+            //함수안에 함수가 할당된 상태
+            var func2 = function () {
+                var b = 5;
+                var c = 6;
+                a = a + b + c;
+                console.log(a);
+            }
+
+            func2();
+        }
+
+        func();
+    </script>
+</body>
+
+</html>

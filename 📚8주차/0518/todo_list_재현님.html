@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        class Todo {
+            constructor(item, finished) {
+                this.item = item;
+                this.finished = finished;
+            }
+
+            changeState() {
+                this.finished = !this.finished;
+            }
+        }
+        class TodoManager {
+            constructor() {
+                this.todoList = [];
+            }
+
+            addItem(item, finished = false) {
+                const todo = new Todo(item, finished);
+                this.todoList.push(todo);
+            }
+
+            getItems() {
+                return this.todoList;
+            }
+            getLeftTodoCount() {
+                //콜백함수
+                return this.todoList.reduce((total, current) => {
+                    if (current.finished === false) {
+                        return ++total;
+                    } else {
+                        return total;
+                    }
+                }, 0 //total의 초기값
+                );
+            }
+        }
+
+        //console창
+        //const todoManger = new TodoManager();
+        //todoManger.addItem('숙제하기');
+        //todoManger.getItems();
+        //todoManager.getItems()[0].changeState();
+        //todoManager.getItems();
+        //todoManager.addItem('밥먹기');
+        //todoManager.addItem('운동하기');
+        //todoManager.getItems();
+        //todoManager.getLeftTodoCount();
+    </script>
+
+</body>
+
+</html>

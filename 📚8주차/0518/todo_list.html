@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        class Todo {
+            constructor(content, state = false) {
+                this.content = content;
+                this.state = state;
+            }
+            changeState() {
+                this.state = this.state === false ? true : false;
+            }
+        }
+        class TodoManager {
+            constructor(todos = []) {
+                this.todos = todos;
+            }
+            addItem(todo) {
+                this.todos.push(todo);
+            }
+            getItems() {
+                return this.todos;
+            }
+            getLeftTodoCount() {
+                return this.todos.filter(todo => todo.state === false).length;
+            }
+        }
+        const todo_routine = new TodoManager();
+        todo_routine.addItem(new todo('수업듣기'));
+        // todos.addItem('출석하기');
+        // todos.getItems();
+        // todos.getItems()[0].changeState();
+        // todos.getItems();
+
+
+    </script>
+</body>
+
+</html>
