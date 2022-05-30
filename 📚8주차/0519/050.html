@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        //렉스컬 스코프(당연한 정적인 스코프,맥락에 따라 결정되는 스코프)
+        //클로저
+        //inner함수의 상위스코프 outer(바뀔일이없음 정적=렉시컬)
+        function outer() {
+            let val = 'test';
+            function inner() {
+                console.log(val);
+            }
+            return inner;
+        }
+        const innerFunc = outer();
+        innerFunc();
+
+        //다이나믹 스코프(동적인 스코프): 함수가 실행되는 시점에 상위 스코프가 결정된다.
+
+    </script>
+</body>
+
+</html>

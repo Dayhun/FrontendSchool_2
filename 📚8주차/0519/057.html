@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        //엄격모드
+        'use strict';
+
+        //선언하지 않은 변수에 할당할 수 없다.
+        str = 'hello strict'; //에러발생(실수예방가능 ㅎㅎ)
+
+        //읽기 전용 객체에 값을 할당할 수 없다.(일반모드에서는 에러무시(조용한에러))
+        //엄격모드에서는 에러라고 알려줌
+        var undefined = 'undefined';//undefined는 예약어이기 때문에 변수로 쓰면 안됨.
+        var Infinity = 100;
+        Math.PI = 0;
+        //에러발생
+
+        //지울수없는 값을 지우려고 하면 에러 발생
+        const Employee = {
+            firstname: 'John',
+            lastname: 'Doe'
+        }
+        console.log(Employee.firstname);
+        delete Employee.firstname;
+        console.log(Employee.firstname);//undefined
+        delete Object.prototype; //못지우지만 조용한 에러 발생(에러무시)하지만 엄격모드에서는 에러발생시킴(프로퍼티는 삭제할수없는애잖아!!!)
+
+        //함수파라메터에 중복된 이름을 사용할 수 없다.
+        function myFunc(a, a, b) {
+            console.log(a + a + b);
+        }
+        myFunc(1, 2, 3); //원래는 7나옴 엄격모드에서는 에러발생!
+    </script>
+</body>
+
+</html>
