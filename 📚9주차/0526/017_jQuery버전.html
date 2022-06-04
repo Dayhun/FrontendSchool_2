@@ -1,0 +1,30 @@
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>위니브 스토어</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script>
+        const root = document.getElementById('root')
+
+        let product;
+        $.ajax({
+            url: 'http://test.api.weniv.co.kr/mall',
+            async: true,
+            dataType: 'JSON',
+            success: function (result) {
+                // $("#data").text(result);
+                product = result;
+            }
+        });
+
+    </script>
+</body>
+
+</html>
