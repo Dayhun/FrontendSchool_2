@@ -6,6 +6,6 @@
 |---|---|---|---|
 |06.13|월|React|Components
 |06.14|화|React|Router
-|06.15|수|React|
-|06.16|목|React|
-|06.17|금|React|
+|06.15|수|React|Hook
+|06.16|목|Redux|Redux
+|06.17|금|특강|Figma
