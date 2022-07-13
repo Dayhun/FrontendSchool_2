@@ -1,0 +1,30 @@
+.nav {
+    background-color: blanchedalmond;
+    padding: 20px 30px;
+}
+
+.nav .list_nav {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.nav .tit {
+    color: orange;
+}
+
+.nav a {
+    margin-left: 20px;
+    color: orange;
+    text-decoration: none;
+}
+
+.nav button {
+    margin-left: 20px;
+    padding: 6px 12px;
+    border-radius: 10px;
+    background-color: orange;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
