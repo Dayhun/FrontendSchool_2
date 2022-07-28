@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <form action="">
+        <label for="txt">사과를 입력하세요</label>
+        <input type="text" id="txt" pattern="사과">
+
+        <label for="txt">사과 혹은 수박 혹은 참외를 입력하세요</label>
+        <input type="text" id="txt" pattern="사과|수박|참외">
+
+        <label for="txt">아무 문자나 세개 입력해보세요</label>
+        <input type="text" id="txt" pattern="...">
+
+        <label for="txt">첫번째 문자는 사, 과, 배, 두번째 문자는 1, 2, 3 을 작성하세요</label>
+        <input type="text" id="txt" pattern="[사과배][123]">
+
+        <label for="txt">아무 한글이나 한글자 입력하세요</label>
+        <input type="text" id="txt" pattern="[ㄱ-ㅎ가-힣]">
+
+        <label for="txt">아무 한글이나 여러글자 입력하세요</label>
+        <input type="text" id="txt" pattern="[ㄱ-ㅎ가-힣]*">
+
+        <label for="txt">아무 특수기호를 제외하고 아무 글자를 입력하세요</label>
+        <input type="text" id="txt" pattern="[ㄱ-ㅎ가-힣a-zA-Z0-9]*">
+
+        <label for="txt">아무 특수기호를 제외하고 아무 글자를 입력하세요, 단 4글자 이상</label>
+        <input type="text" id="txt" pattern="[ㄱ-ㅎ가-힣a-zA-Z0-9ㅏ-ㅣ]{4,}">
+
+        <label for="txt">주민번호를 입력하세요 : </label>
+        <input type="text" id="txt" pattern="[0-9]{6}(1|2|3|4)[0-9]{7}">
+
+        <label for="txt">주민등록번호를 입력하세요 : </label>
+        <input type="text" id="txt" pattern="[0-9]{6}[0-9]{7}">
+
+        <label for="txt">이메일을 입력하세요 : </label>
+        <input type="email" id="txt" pattern="[a-zA-Z0-9!#$%^]*@[a-zA-Z0-9!#$%^]*\.[a-zA-Z]*">
+
+        <label for="txt">전화번호를 입력하세요 : </label>
+        <input type="text" id="txt" pattern="(010|016|011)[0-9]{3,4}[0-9]{4}">
+        <button>제출</button>
+    </form>
+</body>
+
+</html>

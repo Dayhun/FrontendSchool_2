@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <form action="">
+
+        <label for="txt">이메일을 입력 : </label>
+        <input type="email" id="txt" required>
+        <input type="text" required class="inp">
+        <button>제출</button>
+    </form>
+
+    <script>
+        const inp = document.querySelector('input');
+        const inp2 = document.querySelector('.inp');
+        const btn = document.querySelector('button');
+
+        btn.addEventListener('click', () => {
+            validate(inp);
+            validate(inp2);
+        })
+
+        function validate(target) {
+            if (target.validity.typeMismatch) {
+                target.setCustomValidity('제대로된 이메일 주소를 입력해주세요');
+            } else if (target.validity.valueMissing) {
+                target.setCustomValidity('아무런 값이 존재하지 않습니다.');
+            } else {
+                target.setCustomValidity('');
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>
